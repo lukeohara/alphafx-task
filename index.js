@@ -69,11 +69,10 @@ for (let i = 0; i < Object.keys(library).length; i++) {
 //
 // one hundred and twelve
 
-// for (let i = 0; i < 1000000 + 1; i += 1) {
-//   console.log(numberToWords.toWords(i));
-//   (function(i) {
-//     setTimeout(() => {
-//       console.log(numberToWords.toWords(i));
-//     }, 500 + i / 2);
-//   })(i);
-// }
+for (let i = 0; i < 1000000 + 1; i += 1) {
+  (function(i) {
+    setTimeout(() => {
+      console.log(numberToWords.toWords(i));
+    }, 400 * i);
+  })(i);
+}
